@@ -21,3 +21,9 @@
 
 // 4. Write a function that returns a specific book by search term. 
     //Find
+
+  
+    const arr = [1,2,3]
+    const timesTwo = (num) =>  num*2
+    arr.map(timesTwo)
+

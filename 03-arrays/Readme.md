@@ -104,3 +104,26 @@ const square = (num) => num * num
 arr.map(square)
 
 ```
+#### Here's an array.   
+
+![array](assets/array.png)
+
+#### Here's map being called on the array. The callback in map transforms a string to uppercase.    
+
+![map](assets/map.png)
+
+#### Map calls the callback on every element in the array. The element gets added to a new array until we reach the end of the array.
+
+![amap](assets/amap.png)
+![bmap](assets/bmap.png)
+![cmap](assets/cmap.png)
+![dmap](assets/dmap.png)
+
+#### At the end of the array map returns the new array with the transformed elements.
+
+![new_array](assets/new_array.png)
+
+
+
+
+
