@@ -1,4 +1,4 @@
-# Functions
+# Arrays
 ## SWBAT
 - Create arrays
 - Access elements from arrays

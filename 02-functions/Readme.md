@@ -1,4 +1,4 @@
-# Arrays
+# Functions
 ## SWBAT
 - Understand the difference between declaring and invoking a function
 - Implement Function Declarations, Function Expressions, and Arrow Functions
