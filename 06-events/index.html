@@ -21,11 +21,35 @@
       <header>
         <div>
           <h1></h1>
-          <h2></h2>
-          <h2></h2>
+          <div id="banner"></div>
         </div>
       </header>
       <main>
+        <div id="form-wrapper">
+        <form id="book-form">
+          <div>
+          <label for="title">Title:</label><br>
+          <input type="text" id="form-title" name="title"><br>
+          </div>
+          <div>
+          <label for="author">Author:</label><br>
+          <input type="text" id="form-author" name="author">
+          </div>
+          <div>
+          <label for="price">Price:</label><br>
+          <input type="number" id="form-price" name="price">
+          </div>
+          <div>
+          <label for="imageUrl">Image url:</label><br>
+          <input type="text" id="form-imageUrl" name="imageUrl">
+          </div>
+          <div>
+            <label for="inventory">Inventory:</label><br>
+            <input type="text" id="inventory" name="inventory">
+            </div>
+          <input type="submit" value="ADD BOOK"/>
+        </form>
+      </div>
         <div class="list">
           <ul id="book-list">
             <li>
