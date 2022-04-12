@@ -1,12 +1,21 @@
 {"store_info" : 
     [
     {
+       "id":1,
         "location":"Seattle",
         "address":"333 st ne Seattle wa 99999",
         "number":9999999999,
         "name":"Easley's Technical Books",
         "hours":"Monday - Friday 9am - 6pm"
-    }
+    },
+    {
+      "id":2,
+       "location":"New York",
+       "address":"333 st ne New York wa 99999",
+       "number":9999999999,
+       "name":"BooksRus",
+       "hours":"Monday - Friday 9am - 6pm"
+   }
 ],
 "inventory":[
        {

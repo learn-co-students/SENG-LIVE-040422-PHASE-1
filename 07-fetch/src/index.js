@@ -1,8 +1,43 @@
 //1. Move function calls to DOMContentLoaded loaded event.
-//2. Add fetch calls for data now handled by our JSON server. 
+//2. Add fetch calls for data now handled by our JSON server.
+// fetch('https://pokeapi.co/api/v2/pokemon')
+// .then(res => res.json())
+// .then((data) => {
+//     console.log(data)
+// })
+
+// fetch('http://localhost:3000/store_info/1')
+// .then((res) => {
+//     return res.json()
+// })
+// .then((data) => {
+//     console.log(data)
+//     renderHeader(data)
+//     renderFooter(data)
+// })
+
+// fetch('http://localhost:3000/inventory')
+// .then(res => res.json())
+// .then(books => renderBookList(books))
+
+const getData = (url) => {
+    return fetch(url)
+    .then(res => res.json())
+}
+
+getData('http://localhost:3000/store_info/1')
+.then((data) => {
+    console.log(data)
+    renderHeader(data)
+    renderFooter(data)
+})
+
+getData('http://localhost:3000/inventory')
+.then(books => renderBookList(books))
+
 
     //Render Header
-    const renderHeader = () => document.querySelector('header h1').textContent = bookStore.name
+    const renderHeader = (bookStore) => document.querySelector('header h1').textContent = bookStore.name
 
 
     //Render BookList
@@ -44,7 +79,7 @@
     }
 
     //Renders Footer
-    const renderFooter = () => {
+    const renderFooter = (bookStore) => {
         
         const footer = document.querySelector('footer')
         footer.innerHTML = `

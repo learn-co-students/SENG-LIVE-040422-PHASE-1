@@ -67,11 +67,30 @@ fetch(url)
 
 ```
 
+
 ### JSON server
+JavaScript Object Notation(JSON) is a light weight format for storing and sending data through requests.
+
 JSON server is a full fake REST API with zero coding on your end.
 ```
 // To install run the following in your terminal 
 npm install -g json-server
+
+//To run json-server you must have a db.json and run json-server --watch db.json in your terminal. If you do not have a db.json json server will make you one.
+
+// Here is an example of a db.json file
+//db.json
+{"store_info" : 
+    [
+        {
+            "location":"Seattle",
+            "address":"333 st ne Seattle wa 99999",
+            "number":9999999999,
+            "name":"Easley\'s Technical Books",
+            "hours":"Monday - Friday 9am - 6pm"
+        }
+    ]
+}
 
 
 ```
