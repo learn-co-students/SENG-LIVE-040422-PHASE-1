@@ -66,3 +66,12 @@ fetch(url)
 .then(data => console.log(data))
 
 ```
+
+### JSON server
+JSON server is a full fake REST API with zero coding on your end.
+```
+// To install run the following in your terminal 
+npm install -g json-server
+
+
+```
