@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <!-- Css style sheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Data file -->
+    <script defer src="src/data.js"></script>
+    <!-- JavaScript file -->
+    <!-- defer - this file will load after the DOM loads -->
+    <script defer src="src/index.js"></script>
+    
+
+    <title>JS Data Types and Variables</title>
+  </head>
+  <body>
+    <div class="list" id="header">
+      <header>
+        <div>
+          <h1></h1>
+          <div id="banner"></div>
+        </div>
+      </header>
+      <main>
+        <div id="form-wrapper">
+        <form id="book-form">
+          <div>
+          <label for="title">Title:</label><br>
+          <input type="text" id="form-title" name="title"><br>
+          </div>
+          <div>
+          <label for="author">Author:</label><br>
+          <input type="text" id="form-author" name="author">
+          </div>
+          <div>
+          <label for="price">Price:</label><br>
+          <input type="number" id="form-price" name="price">
+          </div>
+          <div>
+          <label for="imageUrl">Image url:</label><br>
+          <input type="text" id="form-imageUrl" name="imageUrl">
+          </div>
+          <div>
+            <label for="inventory">Inventory:</label><br>
+            <input type="text" id="inventory" name="inventory">
+            </div>
+          <input type="submit" value="ADD BOOK"/>
+        </form>
+      </div>
+        <div class="list">
+          <ul id="book-list">
+            <li>
+              <h3>Example Title</h3>
+              <p>Example Author</p>
+              <p>$99</p>
+              <img src="https://image.shutterstock.com/image-vector/no-image-available-icon-template-600w-1036735678.jpg">
+            </li>
+
+          </ul>
+        </div>
+      </main>
+      <footer>
+
+      </footer>
+    </div>
+  </body>
+  
+</html>
