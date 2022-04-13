@@ -1,0 +1,32 @@
+.card{
+    background-image: url("assets/cardBackground.png");
+    padding: 10px;
+    border-top: 10px solid #5c584d;
+    border-bottom: 10px solid #5c584d;
+    color: rgb(92, 81, 73);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+li{
+    list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large ;
+    padding:5px;
+}
+li:hover{
+    background-color: rgb(235, 228, 186);
+    padding:10px;
+    font-size: xx-large;
+    color: rgb(9, 9, 9);
+}
+.list h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large ;
+    background-color: rgb(92, 128, 78);
+    color: whitesmoke;
+    padding: 5px;
+}
+.odd{
+    background-color: rgb(216, 216, 220);
+}
