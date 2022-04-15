@@ -95,11 +95,7 @@ getData('http://localhost:3000/inventory')
 
 
 // function calls
-    renderHeader()
-    renderBookList(bookStore.inventory)
     document.querySelector('#book-list li').remove()
-    renderFooter()
     handleForm()
 
 
-    
