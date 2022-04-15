@@ -5,6 +5,8 @@
 - Render new Data on the DOM with optimistic rendering 
 
 ## POST (Create)
+![post](assets/post.png)
+
 Posts send data to the server. The information is usually sent from a FORM, creating a resource in the database. A POST is typically for creating new data instead of updating data, like PUT or PATCH.
 
 A POST requires an additional argument, a request/config object.
