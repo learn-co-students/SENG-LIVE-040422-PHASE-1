@@ -6,16 +6,6 @@ const getData = (url) => {
     .then(res => res.json())
 }
 
-getData('http://localhost:3000/store_info/1')
-.then((data) => {
-    console.log(data)
-    renderHeader(data)
-    renderFooter(data)
-})
-
-getData('http://localhost:3000/inventory')
-.then(books => renderBookList(books))
-
 
     //Render Header
     const renderHeader = (bookStore) => document.querySelector('header h1').textContent = bookStore.name
@@ -97,5 +87,15 @@ getData('http://localhost:3000/inventory')
 // function calls
     document.querySelector('#book-list li').remove()
     handleForm()
+    getData('http://localhost:3000/store_info/1')
+        .then((data) => {
+        console.log(data)
+        renderHeader(data)
+        renderFooter(data)
+    })
+
+    getData('http://localhost:3000/inventory')
+        .then(books => renderBookList(books))
+
 
 
