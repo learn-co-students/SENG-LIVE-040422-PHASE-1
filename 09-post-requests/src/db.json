@@ -1,24 +1,24 @@
-{"store_info" : 
-    [
+{
+  "store_info": [
     {
-       "id":1,
-        "location":"Seattle",
-        "address":"333 st ne Seattle wa 99999",
-        "number":9999999999,
-        "name":"Easley's Technical Books",
-        "hours":"Monday - Friday 9am - 6pm"
+      "id": 1,
+      "location": "Seattle",
+      "address": "333 st ne Seattle wa 99999",
+      "number": 9999999999,
+      "name": "Easley's Technical Books",
+      "hours": "Monday - Friday 9am - 6pm"
     },
     {
-      "id":2,
-       "location":"New York",
-       "address":"333 st ne New York wa 99999",
-       "number":9999999999,
-       "name":"BooksRus",
-       "hours":"Monday - Friday 9am - 6pm"
-   }
-],
-"inventory":[
-   {
+      "id": 2,
+      "location": "New York",
+      "address": "333 st ne New York wa 99999",
+      "number": 9999999999,
+      "name": "BooksRus",
+      "hours": "Monday - Friday 9am - 6pm"
+    }
+  ],
+  "inventory": [
+    {
       "id": 1,
       "title": "Eloquent JavaScript: A Modern Introduction to Programming",
       "author": "Marjin Haverbeke",
@@ -127,6 +127,15 @@
       ],
       "inventory": 20,
       "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/41oYsXjLvZL._SY344_BO1,204,203,200_.jpg"
+    },
+    {
+      "title": "rose likes to code",
+      "author": "rose",
+      "price": "10",
+      "imageUrl": "a",
+      "inventory": "3",
+      "reviews": [],
+      "id": 8
     }
-    ]
- }
+  ]
+}

@@ -1,10 +1,28 @@
 //1. On submit, data should be sent to our server and create a new resource.
+    // - mock the data to assure the post request is set up correctly.
+    // - remove mock and hook post up to submit event. 
 //2. When the resource is returned from the server, it should be rendered to the client. 
 
 const getData = (url) => {
     return fetch(url)
     .then(res => res.json())
 }
+
+const postData = (bookData) => {
+    fetch('http://localhost:3000/inventory',{
+        method: 'POST',
+        headers: {
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify(bookData)
+    })
+    .then(res => res.json())
+    .then(data => {
+        document.querySelector('ul').append(renderBook(data))
+    
+    })
+}
+
 
 
     //Render Header
@@ -22,6 +40,7 @@ const getData = (url) => {
     
     //Render one book
     const renderBook = (book) => {
+       
         const li = document.createElement('li')
         const h3Title = document.createElement('h3')
         const pAuthor = document.createElement('p')
@@ -44,7 +63,6 @@ const getData = (url) => {
             console.log(e)
             li.remove()
         })
-     
         li.append(h3Title, pAuthor, pPrice, pInventory, img, btn)
         return li
     }
@@ -63,22 +81,18 @@ const getData = (url) => {
 
     const handleForm = () => {
         const form = document.querySelector('form')
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit',(e) => {
             e.preventDefault()
-            console.log(e.target['form-title'].value)
-            const book ={
-            title: e.target.title.value,
-            author: e.target.author.value,
-            price: e.target.price.value,
-            imageUrl: e.target.imageUrl.value,
-            inventory: e.target.inventory.value,
-            reviews:[]
+            const bookData = {
+                title:e.target.title.value,
+                author:e.target.author.value,
+                price:e.target.price.value,
+                imageUrl:e.target.imageUrl.value,
+                inventory:e.target.inventory.value,
+                reviews:[]
             }
-            document.querySelector('#book-list').append(renderBook(book))
-           
+            postData(bookData)
         })
-
-
     }
  
     
