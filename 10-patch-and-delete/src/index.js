@@ -1,26 +1,15 @@
-//1. On submit, data should be sent to our server and create a new resource.
-    // - mock the data to assure the post request is set up correctly.
-    // - remove mock and hook post up to submit event. 
-//2. When the resource is returned from the server, it should be rendered to the client. 
-
+//1. Review post
+//2. Update a book using PATCH.
+// - Add a sell button to a book. On button click the inventory number decreases both on the client and the server. If inventory is 0 remove the buy button.
+//3. Delete a book using DELETE
+// On click of the delete button the book should be removed from the client and server.
 const getData = (url) => {
     return fetch(url)
     .then(res => res.json())
 }
 
 const postData = (bookData) => {
-    fetch('http://localhost:3000/inventory',{
-        method: 'POST',
-        headers: {
-            'Content-Type':'application/json'
-        },
-        body:JSON.stringify(bookData)
-    })
-    .then(res => res.json())
-    .then(data => {
-        document.querySelector('ul').append(renderBook(data))
-    
-    })
+  
 }
 
 
@@ -40,7 +29,6 @@ const postData = (bookData) => {
     
     //Render one book
     const renderBook = (book) => {
-       
         const li = document.createElement('li')
         const h3Title = document.createElement('h3')
         const pAuthor = document.createElement('p')
