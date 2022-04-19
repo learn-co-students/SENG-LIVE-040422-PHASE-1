@@ -29,7 +29,7 @@
           "content": "Good book, but not great for new coders"
         }
       ],
-      "inventory": 10,
+      "inventory": 29,
       "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/51IKycqTPUL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg"
     },
     {
@@ -45,24 +45,6 @@
       ],
       "inventory": 2,
       "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/31SRWF+LkKL._SX398_BO1,204,203,200_.jpg"
-    },
-    {
-      "id": 3,
-      "title": "JavaScript: The Good Parts",
-      "author": "Douglas Crockford",
-      "price": 36,
-      "reviews": [
-        {
-          "userID": 25,
-          "content": "I disagree with everything in this book"
-        },
-        {
-          "userID": 250,
-          "content": "Only JS book anyone needs"
-        }
-      ],
-      "inventory": 8,
-      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/5131OWtQRaL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg"
     },
     {
       "id": 4,
@@ -127,15 +109,6 @@
       ],
       "inventory": 20,
       "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/41oYsXjLvZL._SY344_BO1,204,203,200_.jpg"
-    },
-    {
-      "title": "rose likes to code",
-      "author": "rose",
-      "price": "10",
-      "imageUrl": "a",
-      "inventory": "3",
-      "reviews": [],
-      "id": 8
     }
   ]
 }

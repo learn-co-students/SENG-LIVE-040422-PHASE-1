@@ -3,14 +3,43 @@
 // - Add a sell button to a book. On button click the inventory number decreases both on the client and the server. If inventory is 0 remove the buy button.
 //3. Delete a book using DELETE
 // On click of the delete button the book should be removed from the client and server.
-const getData = (url) => {
-    return fetch(url)
-    .then(res => res.json())
-}
+    const getData = (url) => {
+        return fetch(url)
+        .then(res => res.json())
+    }
 
-const postData = (bookData) => {
-  
-}
+    const postData = (bookData) => {
+    
+  //Review POST
+        fetch('http://localhost:3000/inventory',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(bookData)
+        })
+        .then(res => res.json())
+        .then(bookData =>{
+            document.querySelector('#book-list').append(renderBook(bookData))
+        })
+    }
+
+    const patchData = (book, bodyData) => {
+        return fetch(`http://localhost:3000/inventory/${book.id}`,{
+                method: 'PATCH',
+                headers:{
+                    'Content-type':'application/json'
+                },
+                body: JSON.stringify(bodyData)
+            })
+            .then(res => res.json())
+    }
+
+    const deleteData = (book) => {
+        return fetch(`http://localhost:3000/inventory/${book.id}`,{
+            method:'DELETE'
+        })
+    }
 
 
 
@@ -35,23 +64,46 @@ const postData = (bookData) => {
         const pPrice = document.createElement('p')
         const pInventory = document.createElement('p')
         const img = document.createElement('img')
-        const btn = document.createElement('button')
+        const btnDelete = document.createElement('button')
+        const btnBuy = document.createElement('button')
        
         h3Title.textContent = book.title
         pAuthor.textContent = book.author 
         pPrice.textContent = `$${book.price}`
         pInventory.textContent = `Inventory: ${book.inventory}` 
-        btn.textContent = 'DELETE'
+        btnDelete.textContent = 'DELETE'
+        btnBuy.textContent = 'BUY BOOK'
        
         img.src = book.imageUrl
         li.className = 'list-li'
 
         //adding events
-        btn.addEventListener('click',(e) => {
-            console.log(e)
-            li.remove()
+        btnBuy.addEventListener('click', () => {
+            console.log(book)
+            //pInventory.textContent =  `Inventory: ${book.inventory+=1}` 
+            // fetch(`http://localhost:3000/inventory/${book.id}`,{
+            //     method: 'PATCH',
+            //     headers:{
+            //         'Content-type':'application/json'
+            //     },
+            //     body: JSON.stringify({inventory:book.inventory+=1})
+            // })
+            // .then(res => res.json())
+            // .then(bookData => {
+            //     pInventory.textContent =  `Inventory: ${bookData.inventory}`
+            // })
+            patchData(book, {inventory:book.inventory+=1})
+            .then(bookData => {
+                pInventory.textContent =  `Inventory: ${bookData.inventory}`
+            }) 
         })
-        li.append(h3Title, pAuthor, pPrice, pInventory, img, btn)
+
+        btnDelete.addEventListener('click',() => {
+            deleteData(book)
+            .then(() => li.remove())
+        })
+
+        li.append(h3Title, pAuthor, pPrice, pInventory, img, btnBuy,btnDelete)
         return li
     }
 
@@ -79,6 +131,7 @@ const postData = (bookData) => {
                 inventory:e.target.inventory.value,
                 reviews:[]
             }
+       
             postData(bookData)
         })
     }
